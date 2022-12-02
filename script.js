@@ -1,8 +1,11 @@
 // Date
-/*function setDate (date) { 
-    let now = new Date()
-document.write(now.getDate()+"/"+(now.getMonth()+1)+"/"+now.getFullYear())
-}*/
+function setDate () { 
+    let now = new Date();
+    let dateString = now.toString(); 
+    let modif = document.getElementById("date");
+        modif.innerHTML = dateString;
+};
+setDate();
 
 
 // Récupération des données.
