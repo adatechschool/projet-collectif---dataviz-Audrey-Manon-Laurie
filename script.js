@@ -11,21 +11,99 @@
    // text.style.display.block;
 
 
-function divClick(event){
+/*function divClick(event){
     var textSecondary = document.getElementsByClassName('text-secondary')
     for (var i = 0; i < textSecondary.length; i++) {
         event.target.style.color="#f00";
 }
    
 }
-
     var elements = document.getElementsByClassName("text-primary");
     for (var i = 0; i < elements.length; i++) {
         document.addEventListener("click", divClick)
-}
+}*/
 
+let centreVille = document.getElementById("centreVille");
+let breilBarberie = document.getElementById("breilBarberie");
+let zola = document.getElementById("zola");
+let nantesNord = document.getElementById("nantesNord");
+let bellevue = document.getElementById("bellevue");
+let ile = document.getElementById("ile");
+let hautsPaves = document.getElementById("hautsPaves");
+let malakoff = document.getElementById("malakoff");
 
+let sonde1 = document.getElementById("sonde1");
+let sonde2 = document.getElementById("sonde2");
+let sonde3 = document.getElementById("sonde3");
+let sonde4 = document.getElementById("sonde4");
+let sonde5 = document.getElementById("sonde5");
+let sonde6 = document.getElementById("sonde6");
+let sonde7 = document.getElementById("sonde7");
+let sonde8 = document.getElementById("sonde8");
 
+centreVille.addEventListener("click", () => {
+    if(getComputedStyle(sonde1).display == "none"){
+      sonde1.style.display = "block";
+    } else {
+      sonde1.style.display = "none";
+    }
+  })
+  
+  breilBarberie.addEventListener("click", () => {
+    if(getComputedStyle(sonde2).display == "none"){
+      sonde2.style.display = "block";
+    } else {
+      sonde2.style.display = "none";
+    }
+  })
+
+  zola.addEventListener("click", () => {
+    if(getComputedStyle(sonde3).display == "none"){
+      sonde3.style.display = "block";
+    } else {
+      sonde3.style.display = "none";
+    }
+  })
+
+  nantesNord.addEventListener("click", () => {
+    if(getComputedStyle(sonde4).display == "none"){
+      sonde4.style.display = "block";
+    } else {
+      sonde4.style.display = "none";
+    }
+  })
+
+  bellevue.addEventListener("click", () => {
+    if(getComputedStyle(sonde5).display == "none"){
+      sonde5.style.display = "block";
+    } else {
+      sonde5.style.display = "none";
+    }
+  })
+
+  ile.addEventListener("click", () => {
+    if(getComputedStyle(sonde6).display == "none"){
+      sonde6.style.display = "block";
+    } else {
+      sonde6.style.display = "none";
+    }
+  })
+
+  hautsPaves.addEventListener("click", () => {
+    if(getComputedStyle(sonde7).display == "none"){
+      sonde7.style.display = "block";
+    } else {
+      sonde7.style.display = "none";
+    }
+  })
+
+  malakoff.addEventListener("click", () => {
+    if(getComputedStyle(sonde8).display == "none"){
+      sonde8.style.display = "block";
+    } else {
+      sonde8.style.display = "none";
+    }
+  })
 
 // Récupération des données.
 let url = 'https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_capteurs-ondes-electomagnetiques-nantes-metropole&q=&rows=69&sort=extractjson_date&facet=name&facet=address'

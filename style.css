@@ -79,7 +79,7 @@
 }
 
 .text-secondary{
-    /*display:none;*/
+    display:none;
     font-family: 'Poiret One', cursive;
     font-size:0.5em;
 }
