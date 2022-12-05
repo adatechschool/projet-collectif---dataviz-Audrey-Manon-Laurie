@@ -1,11 +1,30 @@
 // Date
-function setDate () { 
-    let now = new Date();
-    let dateString = now.toString(); 
-    let modif = document.getElementById("date");
-        modif.innerHTML = dateString;
-};
-setDate();
+//function setDate (date) { 
+   // let now = new Date()
+//document.write(now.getDate()+"/"+(now.getMonth()+1)+"/"+now.getFullYear())
+//}
+
+
+// Evenement click //
+
+    
+   // text.style.display.block;
+
+
+function divClick(event){
+    var textSecondary = document.getElementsByClassName('text-secondary')
+    for (var i = 0; i < textSecondary.length; i++) {
+        event.target.style.color="#f00";
+}
+   
+}
+
+    var elements = document.getElementsByClassName("text-primary");
+    for (var i = 0; i < elements.length; i++) {
+        document.addEventListener("click", divClick)
+}
+
+
 
 
 // Récupération des données.

@@ -4,34 +4,138 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carte des ondes électromagnétique par quartier</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id = "date"></div>
-    <div class="map" id="nationsUnis"></div>
-    <div class="map" id="babonneau"></div>
-    <div class="map" id="flandin"></div>
-    <div class="map" id="guistHau"></div>
-    <div class="map" id="breil"></div>
-    <div class="map" id="boccage"></div>
-    <div class="map" id="castellano"></div>
-    <div class="map" id="buisson"></div>
-    <div class="map" id="chaillou"></div>
-    <div class="map" id="madrid"></div>
-    <div class="map" id="roch"></div>
-    <div class="map" id="sarrazin"></div>
-    <div class="map" id="jaures"></div>
-    <div class="map" id="duc"></div>
-    <div class="map" id="bellamy"></div>
+    <div class="navigation">
+        <button id="button-all-text">Tout Afficher</button>
+        <div id="date"></div>
+    </div>
+    <div class="container">
+    <div class="data">
+        <div class="card-top">
+            <div class="card">
+            <div class="text-primary">
+                <p class="district">Centre ville</p>
+                <!-- display none-->
+            <div class="text-secondary ">
+                <!--<img class="img-circle" src="image/image3.png">-->
+                <div class="map" id="nationsUnis"></div>
+            </div>
+            </div>
+            
+            <!-- display none-->
+            </div>
+        <div class="card">
+            <div class="text-primary">
+                <p class="district">Breil - Barberie</p>
+            </div>
+            <!-- display none-->
+            <div class="text-secondary">
+                <img class="img-circle" src="image/image7.png">
+                <div class="map" id="breil"></div>
+            </div>
+            <!-- display none-->
+        </div>
+        <div class="card">
+            <div class="text-primary">
+                <p class="district">Zola</p>
+            </div>
+            <!-- display none-->
+            <div class="text-secondary">
+                <img class="img-circle" src="">
+                <div class="map" id="boccage"></div>
+            </div>
+            <!-- display none-->
+        </div>
+        <div class="card">
+            <div class="text-primary">
+                <p class="">Nantes Nord</p>
+            </div>
+            <!-- display none-->
+            <div class="text-secondary">
+                <img class="img-circle" src="">
+                <div class="map" id="castellano"></div>
+            </div>
+            <!-- display none-->
+        </div>
+    </div>
+    <div class="card-bottom">
+        <div class="card">
+            <div class="text-primary">
+                <p class="">Bellevue Chantenay</p>
+            </div>
+            <!-- display none-->
+            <div class="text-secondary">
+                <div class="map" id="buisson"></div>
+            </div>
+            <!-- display none-->
+        </div>
+        
+        <div class="card">
+            <div class="text-primary">
+                <p class="">Ile de Nantes</p>
+            </div>
+            <!-- display none-->
+            <div class="text-secondary">
+                <div class="map" id="roch"></div>
+            </div>
+            <!-- display none-->
+        </div>
+        <div class="card">
+            <div class="text-primary">
+                <p class="">Hauts-Pavés</p>
+            </div>
+            <!-- display none-->
+            <div class="text-secondary">
+                <div class="map" id="bellamy"></div>
+            </div>
+            <!-- display none-->
+        </div>
+
+        <div class="card">
+            <div class="text-primary">
+                <p class="">Malakoff</p>
+            </div>
+            <!-- display none-->
+            <div class="text-secondary">
+                <div class="map" id="meignen"></div>
+            </div>
+            <!-- display none-->
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="city">
+        <img id="image-city" src="https://img.freepik.com/premium-vector/nantes-transparent-layers-gradient-landmarks-skyline_145772-326.jpg?w=2000" alt="">
+    </div>
+
+  
+   
+    
+  
+    
+    
+    <!---->
+   
+   
+    
+  
+  
+    <!--<div class="map" id="jaures"></div>
+    //<div class="map" id="duc"></div>
+    
     <div class="map" id="bisson"></div>
-    <div class="map" id="meignen"></div>
+    
     <div class="map" id="loquidy"></div>
     <div class="map" id="sully"></div>
     <div class="map" id="garennes"></div>
     <div class="map" id="liberte"></div>
     <div class="map" id="buerne"></div>
     <div class="map" id="brossard"></div>
-    <div class="map" id="auvigne"></div>
+    <div class="map" id="auvigne"></div>-->
 
     <script type="text/javascript" src="script.js" ></script>
 </body>
