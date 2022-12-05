@@ -32,10 +32,10 @@
 
 /* page 2 */
 .navigation{
-    /*margin-top: 2em;
+    margin-top: 2em;
     padding-bottom: 2em;
-    box-shadow:5px 5px 5px rgb(239, 239, 239);
-    border-radius:1em;*/
+    box-shadow:5px 5px 5px rgb(167, 188, 209);
+    border-radius:1em;
 }
 
 
@@ -81,18 +81,15 @@
 .text-secondary{
     display:none;
     font-family: 'Poiret One', cursive;
-    font-size:0.5em;
+    font-size:1em;
+    position:relative;
+    text-align:center;
 }
 
 .img-circle{
-    width:100%;
+    width:50%;
     transition: transform .2s;
-}
-
-.img-circle:hover{
-
-    animation: rotation 5s 1 ease;
-    
+    animation: rotation 3s 1 ease;
 }
 
 @keyframes rotation {
@@ -105,9 +102,22 @@
         opacity:1;
         transform: translateX(0) rotate(359deg) ;
      
-      
-     
     }
   }
 
+.map {
+    position:relative;
+    top:-60px;
+    z-index:1;
+}
 
+.district {
+    font-family: 'Poiret One', cursive;
+    border:none;
+    font-size:1em;
+    cursor:pointer;
+}
+
+.district:hover {
+    font-weight: bolder;
+}
