@@ -32,17 +32,13 @@
 
 /* page 2 */
 .navigation{
-    margin-top: 2em;
-    padding-bottom: 2em;
     box-shadow:5px 5px 5px rgb(167, 188, 209);
     border-radius:1em;
 }
 
-
 .card-top{
     display:flex;
     justify-content:center;
-    margin-bottom:2em;
 }
 
 .card-bottom{
@@ -52,8 +48,6 @@
 .card{
     width:30%;
 }
-
-
 
 .data{
     display:flex;
@@ -79,27 +73,28 @@
 }
 
 .text-secondary{
-    display:none;
+    /*display:none;*/
     font-family: 'Poiret One', cursive;
     font-size:1em;
     position:relative;
     text-align:center;
+    opacity:0;
 }
 
 .img-circle{
     width:50%;
     transition: transform .2s;
-    animation: rotation 3s 1 ease;
+    animation: rotation 5s 1 ease;
 }
 
 @keyframes rotation {
     from {
-        opacity: 0;
-        transform: translateX(-40px)rotate(0deg) ;
+        
+        transform: translateX(-90px)rotate(0deg) ;
      
     }
     to {
-        opacity:1;
+        
         transform: translateX(0) rotate(359deg) ;
      
     }
@@ -120,4 +115,9 @@
 
 .district:hover {
     font-weight: bolder;
+}
+
+.container {
+    width: 75%;
+    margin:auto;
 }

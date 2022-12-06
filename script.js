@@ -42,66 +42,66 @@ let sonde7 = document.getElementById("sonde7");
 let sonde8 = document.getElementById("sonde8");
 
 centreVille.addEventListener("click", () => {
-    if(getComputedStyle(sonde1).display == "none"){
-      sonde1.style.display = "block";
+    if(getComputedStyle(sonde1).opacity == 0){
+      sonde1.style.opacity = 1;
     } else {
-      sonde1.style.display = "none";
+      sonde1.style.opacity = 0;
     }
   })
   
   breilBarberie.addEventListener("click", () => {
-    if(getComputedStyle(sonde2).display == "none"){
-      sonde2.style.display = "block";
+    if(getComputedStyle(sonde2).opacity == 0){
+      sonde2.style.opacity = 1;
     } else {
-      sonde2.style.display = "none";
+      sonde2.style.opacity = 0;
     }
   })
 
   zola.addEventListener("click", () => {
-    if(getComputedStyle(sonde3).display == "none"){
-      sonde3.style.display = "block";
+    if(getComputedStyle(sonde3).opacity == 0){
+      sonde3.style.opacity = 1;
     } else {
-      sonde3.style.display = "none";
+      sonde3.style.opacity = 0;
     }
   })
 
   nantesNord.addEventListener("click", () => {
-    if(getComputedStyle(sonde4).display == "none"){
-      sonde4.style.display = "block";
+    if(getComputedStyle(sonde4).opacity == 0){
+      sonde4.style.opacity = 1;
     } else {
-      sonde4.style.display = "none";
+      sonde4.style.opacity = 0;
     }
   })
 
   bellevue.addEventListener("click", () => {
-    if(getComputedStyle(sonde5).display == "none"){
-      sonde5.style.display = "block";
+    if(getComputedStyle(sonde5).opacity == 0){
+      sonde5.style.opacity = 1;
     } else {
-      sonde5.style.display = "none";
+      sonde5.style.opacity = 0;
     }
   })
 
   ile.addEventListener("click", () => {
-    if(getComputedStyle(sonde6).display == "none"){
-      sonde6.style.display = "block";
+    if(getComputedStyle(sonde6).opacity == 0){
+      sonde6.style.opacity = 1;
     } else {
-      sonde6.style.display = "none";
+      sonde6.style.opacity = 0;
     }
   })
 
   hautsPaves.addEventListener("click", () => {
-    if(getComputedStyle(sonde7).display == "none"){
-      sonde7.style.display = "block";
+    if(getComputedStyle(sonde7).opacity == 0){
+      sonde7.style.opacity = 1;
     } else {
-      sonde7.style.display = "none";
+      sonde7.style.opacity = 0;
     }
   })
 
   malakoff.addEventListener("click", () => {
-    if(getComputedStyle(sonde8).display == "none"){
-      sonde8.style.display = "block";
+    if(getComputedStyle(sonde8).opacity == 0){
+      sonde8.style.opacity = 1;
     } else {
-      sonde8.style.display = "none";
+      sonde8.style.opacity = 0;
     }
   })
 
