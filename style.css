@@ -44,10 +44,49 @@
 }
 
 /* page 2 */
+
 .navigation{
-    box-shadow:5px 5px 5px rgb(167, 188, 209);
-    border-radius:1em;
+    background-color: rgb(202, 230, 241);
+    height: 60px;
+    width: 100%;
+    box-shadow:5px 5px 5px rgb(117, 159, 179);
+    border-radius:15px;
 }
+
+a { 
+    text-decoration: none;
+    color: #000000;
+}
+
+li {
+    list-style-type: none;
+}
+
+#API { 
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative; left: 75%; top: 25px;
+    color: #000000;
+}
+
+#date {
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative; left: 10%; top: -30px;
+    color: #000000;
+}
+
+#github {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative; left: 90%; top: 5px;
+    color: #000000;
+}
+
+
+/* Cards */
 
 .card-top{
     display:flex;

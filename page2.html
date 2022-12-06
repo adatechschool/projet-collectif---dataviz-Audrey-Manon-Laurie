@@ -7,12 +7,26 @@
     <title>Carte des ondes électromagnétique par quartier</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/00df8eb4ce.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <!-- Navigation bar -->
+
     <div class="navigation">
-        <button id="button-all-text">Tout Afficher</button>
+        <!--<button id="button-all-text">Tout Afficher</button>-->
+        <ul>
+            <li id="API"><a href="https://data.nantesmetropole.fr/explore/dataset/244400404_capteurs-ondes-electomagnetiques-nantes-metropole/api/?disjunctive.name&disjunctive.address&sort=extractjson_date&dataChart=eyJxdWVyaWVzIjpbeyJjaGFydHMiOlt7InR5cGUiOiJhcmVhcmFuZ2UiLCJmdW5jIjoiQ09VTlQiLCJ5QXhpcyI6ImV4dHJhY3Rqc29uX3ZhbHVlIiwic2NpZW50aWZpY0Rpc3BsYXkiOnRydWUsImNvbG9yIjoiIzEyNEQ3QiIsImNoYXJ0cyI6W3siZnVuYyI6Ik1JTiIsInlBeGlzIjoiZXh0cmFjdGpzb25fdmFsdWUifSx7ImZ1bmMiOiJNQVgiLCJ5QXhpcyI6ImV4dHJhY3Rqc29uX3ZhbHVlIn1dfV0sInhBeGlzIjoiZXh0cmFjdGpzb25fZGF0ZSIsIm1heHBvaW50cyI6bnVsbCwidGltZXNjYWxlIjoiaG91ciIsInNvcnQiOiIiLCJzZXJpZXNCcmVha2Rvd24iOiIiLCJjb25maWciOnsiZGF0YXNldCI6IjI0NDQwMDQwNF9jYXB0ZXVycy1vbmRlcy1lbGVjdG9tYWduZXRpcXVlcy1uYW50ZXMtbWV0cm9wb2xlIiwib3B0aW9ucyI6eyJkaXNqdW5jdGl2ZS5uYW1lIjp0cnVlLCJkaXNqdW5jdGl2ZS5hZGRyZXNzIjp0cnVlLCJzb3J0IjoiZXh0cmFjdGpzb25fZGF0ZSJ9fSwic2VyaWVzQnJlYWtkb3duVGltZXNjYWxlIjoiIn1dLCJkaXNwbGF5TGVnZW5kIjp0cnVlLCJhbGlnbk1vbnRoIjp0cnVlfQ%3D%3D">Source API</a></li>
+            <li><a href="https://github.com/adatechschool/projet-collectif---dataviz-Audrey-Manon-Laurie"><i class="fa-brands fa-github" id="github"></i></a></li>
+        </ul>
         <div id="date"></div>
+        
     </div>
+
+
+
+<!-- Cards -->
+
     <div class="container">
     <div class="data">
         <div class="card-top">
@@ -22,11 +36,8 @@
                 <!-- display none-->
             <div class="text-secondary" id="sonde1">
                 <img class="img-circle" src="image/image8.png">
-<<<<<<< HEAD
+
                 <div class="map" id="nationsUnis"></div>
-=======
-                <div class="map" id="nationsUnis">ddddddd</div>
->>>>>>> 9acd147eaafe02b376e35d27a167f15a6a5a494f
             </div>
             </div>
             
