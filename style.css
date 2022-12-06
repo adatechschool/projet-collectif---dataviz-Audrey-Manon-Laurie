@@ -52,14 +52,19 @@
 .card-top{
     display:flex;
     justify-content:center;
+    align-items:end;
 }
 
 .card-bottom{
     display:flex;
+    justify-content:center;
+    align-items:start;
+    width:70%;
+    margin:auto;
 }
 
 .card{
-    width:30%;
+    width:25%;
 }
 
 .data{
@@ -69,7 +74,8 @@
     font-size:1.3em;
     font-family: 'Poiret One', cursive;
     flex-direction:column;
-    padding-top:4em;
+    padding-top:2em;
+    padding-bottom:2em;
 }
 
 .city{
@@ -88,35 +94,46 @@
 .text-secondary{
     /*display:none;*/
     font-family: 'Poiret One', cursive;
-    font-size:1em;
-    position:relative;
+    font-size:0.6em;
+    font-weight:bolder;
+    /*position:relative;
     text-align:center;
-    opacity:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;*/
+    opacity: 0;
 }
 
 .img-circle{
-    width:50%;
     transition: transform .2s;
     animation: rotation 5s 1 ease;
 }
 
+
 @keyframes rotation {
     from {
-        
         transform: translateX(-90px)rotate(0deg) ;
-     
     }
     to {
-        
         transform: translateX(0) rotate(359deg) ;
-     
     }
   }
 
 .map {
-    position:relative;
+    /*position:relative;
     top:-60px;
-    z-index:1;
+    z-index:1;*/
+    border: 1px solid rgb(171, 156, 156);
+    background-color:rgb(236, 150, 150);
+    border-radius:5em;
+    width:8em;
+    height:8em;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 3px 3px 5px rgb(243, 235, 235);
+    color:white;
+    padding:0.5em;
 }
 
 .district {
@@ -124,6 +141,7 @@
     border:none;
     font-size:1em;
     cursor:pointer;
+    background-color: white;
 }
 
 .district:hover {
@@ -131,6 +149,19 @@
 }
 
 .container {
-    width: 75%;
+    width: 85%;
     margin:auto;
+}
+
+.fa-circle{
+    color:rgb(221, 40, 40);
+    font-size:5em;
+}
+
+.mapCircle{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+    align-items:center;
 }

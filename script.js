@@ -111,8 +111,8 @@ let url = 'https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=24440
 let nationsUnis = fetch(url)
     .then(response => response.json())
     .then(data => {   
+      let latestValue =  data.records[0].fields.latest_value;
         let address = data.records[0].fields.address;
-        let latestValue =  data.records[0].fields.latest_value;
         let modif = document.getElementById("nationsUnis");
             modif.innerHTML = address + " <br>" + latestValue + " V/m";
     });

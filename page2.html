@@ -7,6 +7,7 @@
     <title>Carte des ondes électromagnétique par quartier</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a7ec6035d3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="navigation">
@@ -14,114 +15,116 @@
         <div id="date"></div>
     </div>
     <div class="container">
-    <div class="data">
-        <div class="card-top">
-            <div class="card">
-            <div class="text-primary">
-                <button class="district" id="centreVille">Centre ville</button>
-                <!-- display none-->
-            <div class="text-secondary" id="sonde1">
-                <img class="img-circle" src="image/image8.png">
-<<<<<<< HEAD
-                <div class="map" id="nationsUnis"></div>
-=======
-                <div class="map" id="nationsUnis">ddddddd</div>
->>>>>>> 9acd147eaafe02b376e35d27a167f15a6a5a494f
-            </div>
-            </div>
-            
-            <!-- display none-->
-            </div>
-        <div class="card">
-            <div class="text-primary">
-                <button class="district" id="breilBarberie">Breil - Barberie</button>
-            </div>
-            <!-- display none-->
-            <div class="text-secondary" id="sonde2">
-                <img class="img-circle" src="image/image9.png">
-                <div class="map" id="breil"></div>
-            </div>
-            <!-- display none-->
-        </div>
-        <div class="card">
-            <div class="text-primary">
-                <button class="district" id="zola">Zola</button>
-            </div>
-            <!-- display none-->
-            <div class="text-secondary" id="sonde3">
-                <img class="img-circle" src="image/image8.png">
-                <div class="map" id="boccage"></div>
-            </div>
-            <!-- display none-->
-        </div>
-        <div class="card">
-            <div class="text-primary">
-                <button class="district" id="nantesNord">Nantes Nord</button>
-            </div>
-            <!-- display none-->
-            <div class="text-secondary" id="sonde4">
-                <img class="img-circle" src="image/image8.png">
-                <div class="map" id="castellano"></div>
-            </div>
-            <!-- display none-->
-        </div>
-    </div>
-    <div class="card-bottom">
-        <div class="card">
-            <div class="text-primary">
-                <button class="district" id="bellevue">Bellevue Chantenay</button>
-            </div>
-            <!-- display none-->
-            <div class="text-secondary" id="sonde5">
-                <img class="img-circle" src="image/image8.png">
-                <div class="map" id="buisson"></div>
-            </div>
-            <!-- display none-->
-        </div>
-        
-        <div class="card">
-            <div class="text-primary">
-                <button class="district" id="ile">Ile de Nantes</button>
-            </div>
-            <!-- display none-->
-            <div class="text-secondary" id="sonde6">
-                <img class="img-circle" src="image/image8.png">
-                <div class="map" id="roch"></div>
-            </div>
-            <!-- display none-->
-        </div>
-        <div class="card">
-            <div class="text-primary">
-                <button class="district" id="hautsPaves">Hauts-Pavés</button>
-            </div>
-            <!-- display none-->
-            <div class="text-secondary" id="sonde7">
-                <img class="img-circle" src="image/image10.png">
-                <div class="map" id="bellamy"></div>
-            </div>
-            <!-- display none-->
-        </div>
+        <div class="data">
+            <div class="card-top">
+                <div class="card">
+                    <div class="text-primary">
+                        <button class="district" id="centreVille">Centre ville</button>
+                        <!-- display none-->
+                        <div class="text-secondary" id="sonde1">
+                            <div class="mapCircle">
+                                <p class="map" id="nationsUnis"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="text-primary">
+                        <button class="district" id="breilBarberie">Breil - Barberie</button>
+                        <!-- display none-->
+                        <div class="text-secondary" id="sonde2">
+                            <div class="mapCircle">
+                                <p class="map" id="breil"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="text-primary">
+                        <button class="district" id="zola">Zola</button>
+                        <!-- Debut display none-->
+                        <div class="text-secondary" id="sonde3">
+                            <div class="mapCircle">
+                                <p class="map" id="boccage"></p>
+                            </div>
+                        </div>
+                        <!-- Fin display None-->
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="text-primary">
+                        <button class="district" id="nantesNord">Nantes Nord</button>
+                        <!-- display none-->
+                        <div class="text-secondary" id="sonde4">
+                            <div class="mapCircle">
+                                <p class="map" id="castellano"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="card">
-            <div class="text-primary">
-                <button class="district" id="malakoff">Malakoff</button>
+                
             </div>
-            <!-- display none-->
-            <div class="text-secondary" id="sonde8">
-                <img class="img-circle" src="image/image8.png">
-                <div class="map" id="meignen"></div>
+
+            <div class="card-bottom">
+                <div class="card">
+                    <div class="text-primary">
+                        <button class="district" id="bellevue">Bellevue Chantenay</button>
+                        <!-- display none-->
+                        <div class="text-secondary" id="sonde5">
+                            <div class="mapCircle">
+                                <p class="map" id="buisson"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="text-primary">
+                        <button class="district" id="ile">Ile de Nantes</button>
+                        <!-- display none-->
+                        <div class="text-secondary" id="sonde6">
+                            <div class="mapCircle">
+                                <p class="map" id="roch"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="text-primary">
+                        <button class="district" id="hautsPaves">Hauts-Pavés</button>
+                        <!-- display none-->
+                        <div class="text-secondary" id="sonde7">
+                            <div class="mapCircle">
+                                <p class="map" id="bellamy"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <div class="text-primary">
+                        <button class="district" id="malakoff">Malakoff</button>
+                        <!-- display none-->
+                        <div class="text-secondary" id="sonde8">
+                            <div class="mapCircle">
+                                <p class="map" id="meignen"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- display none-->
         </div>
-    </div>
-    </div>
     </div>
     <div class="city">
         <img id="image-city" src="image/ville.png" alt="">
     </div>
     
-    <!---->
-  
+
   
     <!--<div class="map" id="jaures"></div>
     //<div class="map" id="duc"></div>
