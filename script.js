@@ -13,9 +13,6 @@ setDate()
 
 // Evenement click //
 
-    
-   // text.style.display.block;
-
 
 /*function divClick(event){
     var textSecondary = document.getElementsByClassName('text-secondary')
