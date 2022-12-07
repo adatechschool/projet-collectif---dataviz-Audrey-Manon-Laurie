@@ -1,8 +1,14 @@
 // Date
-//function setDate (date) { 
-   // let now = new Date()
-//document.write(now.getDate()+"/"+(now.getMonth()+1)+"/"+now.getFullYear())
-//}
+function setDate () { 
+  let now = new Date()
+  let navigationBar = document.getElementById("date")
+    navigationBar.innerHTML = (now.getDate()+"/"+(now.getMonth()+1)+"/"+now.getFullYear())
+}
+
+setDate()
+
+// Navigation bar //
+
 
 
 // Evenement click //
@@ -175,7 +181,7 @@ centreVille.addEventListener("click", () => {
   })
 
 // Récupération des données.
-let url = 'https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_capteurs-ondes-electomagnetiques-nantes-metropole&q=&rows=69&sort=extractjson_date&facet=name&facet=address'
+/*let url = 'https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_capteurs-ondes-electomagnetiques-nantes-metropole&q=&rows=69&sort=extractjson_date&facet=name&facet=address'
 
 let nationsUnis = fetch(url)
     .then(response => response.json())
