@@ -8,8 +8,7 @@ function setDate () {
     day: "numeric",
   };
   let dateString = now.toLocaleDateString("fr-FR",options);
-  let navigationBar = document.getElementById("date");
-    navigationBar.innerHTML = dateString;
+  document.getElementById("date").innerHTML = dateString;
 }
 
 setDate();
@@ -55,35 +54,35 @@ let sonde8 = document.getElementById("sonde8");
 
 centreVille.addEventListener("click", () => {
   resultat(sonde1, "Nantes_01", "centreVille");  
-  })
-  
+  });
+
 breilBarberie.addEventListener("click", () => {
   resultat(sonde2,"Nantes_33","breilBarberie");
-  })
+  });
 
 zola.addEventListener("click", () => {
   resultat(sonde3,"Nantes_34","zola");
-  })
+  });
 
 nantesNord.addEventListener("click", () => {
   resultat(sonde4,"Nantes_29","nantesNord");
-  })
+  });
 
 bellevue.addEventListener("click", () => {
   resultat(sonde5,"Nantes_21","bellevue");
-  })
+  });
 
 ile.addEventListener("click", () => {
   resultat(sonde6,"Nantes_03","ile");  
-  })
+  });
 
 hautsPaves.addEventListener("click", () => {
   resultat(sonde7,"Nantes_27","hautsPaves");
-  })
+  });
 
 malakoff.addEventListener("click", () => {
   resultat(sonde8,"Nantes_26","malakoff");
-  })
+  });
 
 // Récupération des données.
 let url = 'https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_capteurs-ondes-electomagnetiques-nantes-metropole&q=&rows=69&sort=extractjson_date&facet=name&facet=address'
@@ -118,31 +117,43 @@ function resultat(nomSonde, nomCapteur, quartier) {
   })  
 }
 
+/*function array(){
+  let latestValue =  record.fields.latest_value;
+  let addition = latestValue;
 
-/* Barème changement couleurs 
-var colorThreshold = 0,
+  addition.split(" ");
+  let value = parsint(addition[0]);
+  console.log(value);
+  return value;
+}
+
+let latestValue = array()
+
+
+// /Barème changement couleurs 
+//var colorThreshold = 0,
     spanText = document.querySelector('.text-secondary');
 
 function changeColor(val) {
-    var color = "rgb(${94},${179},${45})";
+    var color = "green";
 
     if (val >= 1 && val <= 1,50) {
-        color = "rgb(${190},${231},${40})";
+        color = "green";
     }
     if (val >= 1,50 && val <= 2,50){
-        color = 'rgb(${245},${229},${13})';
+        color = 'yellow';
     }
     if (val > 2,50 && val <= 3){
-        color = 'rgb(${245},${152},${13})';
+        color = 'orange';
     }
      else if (val > 3) {
-        color = "rgb(${228},${24},${17})";
+        color = "red";
     }
 
     spanText.style.color = color;
 }
 
-changeColor(colorThreshold); */
+console.log(changeColor(latestValue)); */
 
 /*
 centreVille.addEventListener("click", () => {
