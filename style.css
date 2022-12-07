@@ -46,16 +46,18 @@
 /* page 2 */
 
 .navigation{
-    background-color: rgb(202, 230, 241);
+    background-color: rgb(46,48,73);
     height: 60px;
     width: 100%;
-    box-shadow:5px 5px 5px rgb(117, 159, 179);
-    border-radius:15px;
+    margin-top:-20px;
+    margin-left:-20px;
+    margin-right:100px;
+    color:white;
 }
 
 a { 
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
 }
 
 li {
@@ -67,7 +69,7 @@ li {
     font-size: 20px;
     font-weight: bold;
     position: relative; left: 75%; top: 25px;
-    color: #000000;
+    color: #ffffff;
 }
 
 #date {
@@ -75,14 +77,14 @@ li {
     font-size: 20px;
     font-weight: bold;
     position: relative; left: 10%; top: -30px;
-    color: #000000;
+    color: #ffffff;
 }
 
 #github {
     font-size: 20px;
     font-weight: bold;
     position: relative; left: 90%; top: 5px;
-    color: #000000;
+    color: #ffffff;
 }
 
 
@@ -91,7 +93,9 @@ li {
 .card-top{
     display:flex;
     justify-content:center;
-    align-items:end;
+    margin-top:3em;
+    width:100%;
+    padding-bottom:100px;
 }
 
 .card-bottom{
@@ -100,6 +104,7 @@ li {
     align-items:start;
     width:70%;
     margin:auto;
+   
 }
 
 .card{
@@ -112,9 +117,7 @@ li {
     text-align:center;
     font-size:1.3em;
     font-family: 'Poiret One', cursive;
-    flex-direction:column;
-    padding-top:2em;
-    padding-bottom:2em;
+    flex-direction:column;margin-top:1em;
 }
 
 .city{
@@ -125,13 +128,15 @@ li {
 
 #image-city{
     width:100%;
+    position:fixed;
+    top:450px;
 }
 .text-primary{
     cursor:pointer;
 }
 
 .text-secondary{
-    /*display:none;*/
+    display:none;
     font-family: 'Poiret One', cursive;
     font-size:0.6em;
     font-weight:bolder;
@@ -140,7 +145,7 @@ li {
     display:flex;
     flex-direction:column;
     justify-content:center;*/
-    opacity: 0;
+    /*opacity: 0;*/
 }
 
 .img-circle{
@@ -180,7 +185,7 @@ li {
     border:none;
     font-size:1em;
     cursor:pointer;
-    background-color: white;
+    background-color: rgb(254, 254, 254);
 }
 
 .district:hover {
