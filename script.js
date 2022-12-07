@@ -13,9 +13,6 @@ setDate()
 
 // Evenement click //
 
-    
-   // text.style.display.block;
-
 
 /*function divClick(event){
     var textSecondary = document.getElementsByClassName('text-secondary')
@@ -47,6 +44,75 @@ let sonde6 = document.getElementById("sonde6");
 let sonde7 = document.getElementById("sonde7");
 let sonde8 = document.getElementById("sonde8");
 
+// code pas de nous !
+
+centreVille.addEventListener("click", () => {
+  resultat(sonde1, "Nantes_01", "centreVille");  
+  })
+  
+breilBarberie.addEventListener("click", () => {
+  resultat(sonde2,"Nantes_33","breilBarberie");
+  })
+
+zola.addEventListener("click", () => {
+  resultat(sonde3,"Nantes_34","zola");
+  })
+
+nantesNord.addEventListener("click", () => {
+  resultat(sonde4,"Nantes_29","nantesNord");
+  })
+
+bellevue.addEventListener("click", () => {
+  resultat(sonde5,"Nantes_21","bellevue");
+  })
+
+ile.addEventListener("click", () => {
+  resultat(sonde6,"Nantes_03","ile");  
+  })
+
+hautsPaves.addEventListener("click", () => {
+  resultat(sonde7,"Nantes_27","hautsPaves");
+  })
+
+malakoff.addEventListener("click", () => {
+  resultat(sonde8,"Nantes_26","malakoff");
+  })
+
+// Récupération des données.
+let url = 'https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_capteurs-ondes-electomagnetiques-nantes-metropole&q=&rows=69&sort=extractjson_date&facet=name&facet=address'
+let result;
+function appelAPI() {
+  fetch(url)
+    .then(response => response.json())
+    .then(data => { 
+      console.log(data.records) 
+      result = data.records;   
+    });
+}
+// on appelle qu'une seule fois l'api, et les records sont stockés dans un tableau
+appelAPI();
+
+
+function resultat(nomSonde, nomCapteur, quartier) {
+  // ajout du code pour afficher/cacher le texte selon la sonde choisie 
+  if(getComputedStyle(nomSonde).opacity === 0){
+    nomSonde.style.opacity = 1;
+  } else {
+    nomSonde.style.opacity = 0;
+  }
+  // on va chercher dans le tableau le resultat qui correspond au capteur choisi
+  result.forEach((record) => {
+    if(nomCapteur === record.fields.name){
+      console.log(record.fields.address)
+      let address = record.fields.address;
+      let latestValue =  record.fields.latest_value;
+      document.getElementById(quartier).innerHTML = address + " <br>" + latestValue + " V/m";
+    }  
+  })  
+}
+
+
+/*
 centreVille.addEventListener("click", () => {
     if(getComputedStyle(sonde1).opacity == 0){
       sonde1.style.opacity = 1;
@@ -117,8 +183,8 @@ centreVille.addEventListener("click", () => {
 let nationsUnis = fetch(url)
     .then(response => response.json())
     .then(data => {   
-      let latestValue =  data.records[0].fields.latest_value;
-        let address = data.records[0].fields.address;
+        let address = data.records[7].fields.address;
+        let latestValue =  data.records[7].fields.latest_value;
         let modif = document.getElementById("nationsUnis");
             modif.innerHTML = address + " <br>" + latestValue + " V/m";
     });
