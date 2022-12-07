@@ -32,6 +32,11 @@ setDate();
         document.addEventListener("click", divClick)
 }*/
 
+// variable qui stock l'url de l'API
+let url = 'https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_capteurs-ondes-electomagnetiques-nantes-metropole&q=&rows=69&sort=extractjson_date&facet=name&facet=address'
+// variable qui va recuperer le resultat de l'API
+let result;
+
 let centreVille = document.getElementById("centreVille");
 let breilBarberie = document.getElementById("breilBarberie");
 let zola = document.getElementById("zola");
@@ -50,71 +55,184 @@ let sonde6 = document.getElementById("sonde6");
 let sonde7 = document.getElementById("sonde7");
 let sonde8 = document.getElementById("sonde8");
 
-// code pas de nous !
-
 centreVille.addEventListener("click", () => {
-  resultat(sonde1, "Nantes_01", "centreVille");  
-  });
+  //  variable qui va stocker l'element du message adresse + valeur
+  let modif = document.getElementById("nationsUnis");
 
-breilBarberie.addEventListener("click", () => {
-  resultat(sonde2,"Nantes_33","breilBarberie");
-  });
+  if(getComputedStyle(sonde1).opacity == 0){
+    // on affiche le cercle
+    sonde1.style.opacity = 1;
+    // on parcours les resultats de l'API pour
+    result.forEach((record) => {
+      if("Nantes_01" === record.fields.name){
+        console.log(record.fields.address);
+        let address = record.fields.address;
+        let latestValue =  record.fields.latest_value;
+        changerCouleur(latestValue, modif);
+        modif.innerHTML = address + " <br>" + latestValue + " V/m";
+        }  
+      })  
+    } else {
+      // on efface tout ce qui est visible
+      sonde1.style.opacity = 0;
+      modif.innerHTML =" ";
+    }
+  })
+  
+  breilBarberie.addEventListener("click", () => {
+    let modif = document.getElementById("breil");
+    if(getComputedStyle(sonde2).opacity == 0){
+      sonde2.style.opacity = 1;
+      result.forEach((record) => {
+        if("Nantes_33" === record.fields.name){
+          let address = record.fields.address;
+          let latestValue =  record.fields.latest_value;
+          changerCouleur(latestValue, modif);
+          modif.innerHTML = address + " <br>" + latestValue + " V/m";
+          }  
+        })  
+    } else {
+      sonde2.style.opacity = 0;
+      modif.innerHTML ="<br>";
+    }
+  })
 
-zola.addEventListener("click", () => {
-  resultat(sonde3,"Nantes_34","zola");
-  });
+  zola.addEventListener("click", () => {
+    let modif = document.getElementById("boccage");
+    if(getComputedStyle(sonde3).opacity == 0){
+      sonde3.style.opacity = 1;
+      result.forEach((record) => {
+        if("Nantes_34" === record.fields.name){
+          let address = record.fields.address;
+          let latestValue =  record.fields.latest_value;
+          changerCouleur(latestValue, modif);
+          modif.innerHTML = address + " <br>" + latestValue + " V/m";
+          }  
+        })  
+    } else {
+      sonde3.style.opacity = 0;
+      modif.innerHTML ="<br>";
+    }
+  })
 
-nantesNord.addEventListener("click", () => {
-  resultat(sonde4,"Nantes_29","nantesNord");
-  });
+  nantesNord.addEventListener("click", () => {
+    let modif = document.getElementById("castellano");
+    if(getComputedStyle(sonde4).opacity == 0){
+      sonde4.style.opacity = 1;
+      result.forEach((record) => {
+        if("Nantes_29" === record.fields.name){
+          let address = record.fields.address;
+          let latestValue =  record.fields.latest_value;
+          changerCouleur(latestValue, modif);
+          modif.innerHTML = address + " <br>" + latestValue + " V/m";
+          }  
+        })  
+    } else {
+      sonde4.style.opacity = 0;
+      modif.innerHTML ="<br>";
+    }
+  })
 
-bellevue.addEventListener("click", () => {
-  resultat(sonde5,"Nantes_21","bellevue");
-  });
+  bellevue.addEventListener("click", () => {
+    let modif = document.getElementById("buisson");
+    if(getComputedStyle(sonde5).opacity == 0){
+      sonde5.style.opacity = 1;
+      result.forEach((record) => {
+        if("Nantes_21" === record.fields.name){
+          let address = record.fields.address;
+          let latestValue =  record.fields.latest_value;
+          changerCouleur(latestValue, modif);
+          modif.innerHTML = address + " <br>" + latestValue + " V/m";
+          }  
+        })  
+    } else {
+      sonde5.style.opacity = 0;
+      modif.innerHTML ="<br>";
+    }
+  })
 
-ile.addEventListener("click", () => {
-  resultat(sonde6,"Nantes_03","ile");  
-  });
+  ile.addEventListener("click", () => {
+    let modif = document.getElementById("roch");
+    if(getComputedStyle(sonde6).opacity == 0){
+      sonde6.style.opacity = 1;
+      result.forEach((record) => {
+        if("Nantes_03" === record.fields.name){
+          let address = record.fields.address;
+          let latestValue =  record.fields.latest_value;
+          changerCouleur(latestValue, modif);
+          modif.innerHTML = address + " <br>" + latestValue + " V/m";
+          }  
+        })  
+    } else {
+      sonde6.style.opacity = 0;
+      modif.innerHTML ="<br>";
+    }
+  })
 
-hautsPaves.addEventListener("click", () => {
-  resultat(sonde7,"Nantes_27","hautsPaves");
-  });
+  hautsPaves.addEventListener("click", () => {
+    let modif = document.getElementById("bellamy");
+    if(getComputedStyle(sonde7).opacity == 0){
+      sonde7.style.opacity = 1;
+      result.forEach((record) => {
+        if("Nantes_27" === record.fields.name){
+          let address = record.fields.address;
+          let latestValue =  record.fields.latest_value;
+          changerCouleur(latestValue, modif);
+          modif.innerHTML = address + " <br>" + latestValue + " V/m";
+          }  
+        })  
+    } else {
+      sonde7.style.opacity = 0;
+      modif.innerHTML ="<br>";
+    }
+  })
 
-malakoff.addEventListener("click", () => {
-  resultat(sonde8,"Nantes_26","malakoff");
-  });
+  malakoff.addEventListener("click", () => {
+    let modif = document.getElementById("meignen");
+    if(getComputedStyle(sonde8).opacity == 0){
+      sonde8.style.opacity = 1;
+      result.forEach((record) => {
+        if("Nantes_26" === record.fields.name){
+          let address = record.fields.address;
+          let latestValue =  record.fields.latest_value;
+          changerCouleur(latestValue, modif);
+          modif.innerHTML = address + " <br>" + latestValue + " V/m";
+          }  
+        })  
+    } else {
+      sonde8.style.opacity = 0;
+      modif.innerHTML ="<br>";
+    }
+  })
 
 // Récupération des données.
-let url = 'https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_capteurs-ondes-electomagnetiques-nantes-metropole&q=&rows=69&sort=extractjson_date&facet=name&facet=address'
-let result;
-function appelAPI() {
-  fetch(url)
+function appelAPI(urlAPI) {
+  fetch(urlAPI)
     .then(response => response.json())
     .then(data => { 
+      // on affiche le résultat pour être sur
       console.log(data.records) 
+      // on le stock dans une variable
       result = data.records;   
     });
 }
+
 // on appelle qu'une seule fois l'api, et les records sont stockés dans un tableau
-appelAPI();
+appelAPI(url);
 
-
-function resultat(nomSonde, nomCapteur, quartier) {
-  // ajout du code pour afficher/cacher le texte selon la sonde choisie 
-  if(getComputedStyle(nomSonde).opacity === 0){
-    nomSonde.style.opacity = 1;
+//fonction pour attribuer une couleur en fonction de la valeur V/m
+function changerCouleur(valeur, texte){
+  if (valeur > 3) {
+    texte.style.color = "#FC0202";
+  } else if (valeur > 2.5) {
+    texte.style.color = "#C65D01";
+  } else if (valeur > 1.5) {
+    texte.style.color = "#F0E800";
+  } else if (valeur > 1) {
+    texte.style.color = "#A8F000";
   } else {
-    nomSonde.style.opacity = 0;
+    texte.style.color = "#00F048";
   }
-  // on va chercher dans le tableau le resultat qui correspond au capteur choisi
-  result.forEach((record) => {
-    if(nomCapteur === record.fields.name){
-      console.log(record.fields.address)
-      let address = record.fields.address;
-      let latestValue =  record.fields.latest_value;
-      document.getElementById(quartier).innerHTML = address + " <br>" + latestValue + " V/m";
-    }  
-  })  
 }
 
 /*function array(){

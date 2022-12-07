@@ -142,7 +142,7 @@ li {
     flex-direction:column;
     justify-content:end;
     position: fixed;
-    top: 68%;
+    top: 78%;
 }
 
 #image-city{
@@ -185,7 +185,7 @@ li {
     top:-60px;
     z-index:1;*/
     border: 1px solid rgb(171, 156, 156);
-    background-color:rgb(236, 150, 150);
+    background-color:rgb(46, 48, 73);
     border-radius:5em;
     width:8em;
     height:8em;
