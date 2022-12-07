@@ -1,11 +1,18 @@
-// Date
+ // Date
 function setDate () { 
   let now = new Date()
-  let navigationBar = document.getElementById("date")
-    navigationBar.innerHTML = (now.getDate()+"/"+(now.getMonth()+1)+"/"+now.getFullYear())
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  let dateString = now.toLocaleDateString("fr-FR",options);
+  let navigationBar = document.getElementById("date");
+    navigationBar.innerHTML = dateString;
 }
 
-setDate()
+setDate();
 
 // Navigation bar //
 
@@ -13,7 +20,7 @@ setDate()
 
 // Evenement click //
 
-
+    
 /*function divClick(event){
     var textSecondary = document.getElementsByClassName('text-secondary')
     for (var i = 0; i < textSecondary.length; i++) {
@@ -111,6 +118,31 @@ function resultat(nomSonde, nomCapteur, quartier) {
   })  
 }
 
+
+/* Barème changement couleurs 
+var colorThreshold = 0,
+    spanText = document.querySelector('.text-secondary');
+
+function changeColor(val) {
+    var color = "rgb(${94},${179},${45})";
+
+    if (val >= 1 && val <= 1,50) {
+        color = "rgb(${190},${231},${40})";
+    }
+    if (val >= 1,50 && val <= 2,50){
+        color = 'rgb(${245},${229},${13})';
+    }
+    if (val > 2,50 && val <= 3){
+        color = 'rgb(${245},${152},${13})';
+    }
+     else if (val > 3) {
+        color = "rgb(${228},${24},${17})";
+    }
+
+    spanText.style.color = color;
+}
+
+changeColor(colorThreshold); */
 
 /*
 centreVille.addEventListener("click", () => {
